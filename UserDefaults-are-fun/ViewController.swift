@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var favLable: UILabel!
+    
+    var people = [Person]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +22,19 @@ class ViewController: UIViewController {
         } else {
             favLable.text = "Pick a Favorite Color"
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        let personA = Person(first: "Shivam", last: "Sharma")
+        let personB = Person(first: "Sanya", last: "Sharma")
+        let personC = Person(first: "Ishaan", last: "Sharma")
+        
+        people.append(personA)
+        people.append(personB)
+        people.append(personC)
+        
+        let peopleData = NSKeyedArchiver.archivedData(withRootObject: people)
+        
+        UserDefaults.standard.set(peopleData, forKey: "people")
+        UserDefaults.standard.synchronize()
     }
 
     @IBAction func red(_ sender: UIButton) {
@@ -43,6 +53,14 @@ class ViewController: UIViewController {
         favLable.text = "Favorite Color: Blue"
         UserDefaults.standard.set("Blue", forKey: "color")
         UserDefaults.standard.synchronize()
+        
+        if let loadedPeople = UserDefaults.standard.object(forKey: "people") as? Data {
+            if let peopleArray = NSKeyedUnarchiver.unarchiveObject(with: loadedPeople) as? [Person] {
+                for person in peopleArray {
+                    print(person.firstName)
+                }
+            }
+        }
     }
     
     

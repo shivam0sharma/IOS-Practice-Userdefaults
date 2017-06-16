@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		407CDBB51EF4330E006AE200 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CDBB41EF4330E006AE200 /* Person.swift */; };
 		40AC40E01EE74C250066C59F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC40DF1EE74C250066C59F /* AppDelegate.swift */; };
 		40AC40E21EE74C250066C59F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC40E11EE74C250066C59F /* ViewController.swift */; };
 		40AC40E51EE74C250066C59F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AC40E31EE74C250066C59F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		407CDBB41EF4330E006AE200 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		40AC40DC1EE74C250066C59F /* UserDefaults-are-fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UserDefaults-are-fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AC40DF1EE74C250066C59F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40AC40E11EE74C250066C59F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				40AC40DF1EE74C250066C59F /* AppDelegate.swift */,
 				40AC40E11EE74C250066C59F /* ViewController.swift */,
+				407CDBB41EF4330E006AE200 /* Person.swift */,
 				40AC40E31EE74C250066C59F /* Main.storyboard */,
 				40AC40E61EE74C250066C59F /* Assets.xcassets */,
 				40AC40E81EE74C250066C59F /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407CDBB51EF4330E006AE200 /* Person.swift in Sources */,
 				40AC40E21EE74C250066C59F /* ViewController.swift in Sources */,
 				40AC40E01EE74C250066C59F /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +308,7 @@
 				40AC40F01EE74C250066C59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
